@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>OLS - Object Level Security</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Folio
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Blog Single ======= -->
+    <div class="main-content paddsection" style="padding-top: 30px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-md-offset-2">
+            <div class="row">
+              <div class="container-main single-main">
+                <div class="col-md-12">
+                  <div class="block-main mb-30">
+                    <img src="assets/img/blogs/OLS.jpg" class="img-responsive" alt="reviews2"
+                      style="height: 625px; width: 1100px;">
+                    <div class="content-main single-post padDiv">
+                      <div class="journal-txt">
+                        <h4 style="font-size: 20px;">Introduction and Implementation of Object Level Security In Power
+                          BI</h4>
+                      </div>
+                      <div class="post-meta">
+                        <ul class="list-unstyled mb-0">
+                          <li class="author">by:<a href="#">Shubham</a></li>
+                          <li class="date">date:<a href="#">september 03, 2023</a></li>
+                          <!-- <li class="commont"><i class="ion-ios-heart-outline"></i><a href="#">3 Comments</a></li> -->
+                        </ul>
+                      </div>
+                      <h4 style="font-size: 18px; padding-top: 25px;">Introduction:</h4>
+                      <p class="mb-30" style="color: rgb(32, 32, 32);">Object-Level Security (OLS) in Power BI is a
+                        security feature that allows us to control access to specific data objects within a dataset or
+                        report. These data objects include tables, columns, and measures. OLS is particularly valuable
+                        when we need to restrict access to sensitive or confidential information or when we want to
+                        tailor the visibility of data objects for different user roles.</p>
+
+                      <h4 style="font-size: 18px; padding-top: 25px;">Key Concepts:</h4>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Roles:</b> OLS operates
+                        based on roles. We can create roles in Power BI, each representing a group of users with
+                        specific permissions. For example, we might have roles like "Managers," "Sales Team," and
+                        "Finance Team."</p>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Object Permissions:</b>
+                        Within each role, you can specify which data objects users in that role can access. This means
+                        you can hide or restrict access to certain tables, columns, or measures. You can also specify
+                        whether a role can read data, edit data, or have no access to specific objects."</p>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Dynamic Security: </b> OLS
+                        allows you to define dynamic security rules using Data Analysis Expressions (DAX). For instance,
+                        you can set up rules that filter data to only show records relevant to a user's department,
+                        region, or any other criterion."</p>
+
+                      <h4 style="font-size: 18px; padding-top: 25px; color: rgb(32, 32, 32);">Complete Implementation of
+                        Object-Level Security:</h4>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Step 1: Define User Roles
+                          and Object Permissions:</b></p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">1. <b>Identify User Roles:
+                        </b>Begin by identifying the different user roles or groups that will access your Power BI
+                        dataset. These roles can be based on job functions, departments, or any other relevant criteria.
+                        For example, you might have roles like "Managers," "Sales Team," and "Finance Team."</p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">2. <b>Define Object
+                          Permissions: </b>For each role, determine which data objects (tables, columns, measures)
+                        should be accessible and what level of access each role should have (Read, None, or custom
+                        access)."</p>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Step 2: Create Roles in
+                          Power BI Desktop:</b></p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">1. Open your Power BI Desktop
+                        file.<br>2. In the "Model" view, click on the "Manage Roles" button in the "Calculations"
+                        group.<br>3. In the "Manage Roles" dialog, you'll see a list of existing roles. Click the
+                        "Create" button to define new roles based on the user roles you identified earlier.</p>
+                      <ul>
+                        <li><b>Read: </b> The role can view the data in the object.</li>
+                        <li><b>None: </b> The role can view the data in the object.</li>
+                        <li><b>Custom Access (Optional): </b> You can use DAX expressions to define custom rules that
+                          control access to specific data based on user attributes.
+                        </li>
+                      </ul>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Step 4: Define Dynamic
+                          Security Rules (Optional):</b></p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">1. If you need dynamic
+                        security (e.g., showing data relevant to a user's department), you can define dynamic security
+                        rules using DAX expressions. These rules can filter data dynamically based on user attributes.
+                        <br>2. Write DAX expressions that filter data in a way that aligns with the security
+                        requirements of your roles. For example:</p>
+                      <blockquote>= 'Sales'[Salesperson] = USERNAME()</blockquote>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Step 5: Publish to Power
+                          BI Service:</b></p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">1. In the Power BI service,
+                        navigate to your dataset.<br>2. In the dataset settings, go to "Security." <br>3. Assign
+                        individual users or groups to the roles you created in Power BI Desktop. Users will inherit the
+                        permissions and data access rules associated with their assigned role.</p>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Step 6: Assign Users to
+                          Roles:</b></p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">1. Save your Power BI Desktop
+                        file with the role definitions.<br>2. Publish your Power BI report to the Power BI service.</p>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Step 7: Testing and
+                          Validation:</b></p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">1. Test the implementation by
+                        signing in as different users assigned to various roles.<br>2. Verify that users can only access
+                        the data objects and information specified in their roles.</p>
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>Step 8: Monitor and
+                          Maintain:</b></p>
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">1. Regularly review and
+                        update your OLS settings as needed. This is especially important when user roles change or when
+                        new data objects are added to your dataset.<br>2. Ensure that OLS aligns with your
+                        organization's security and compliance policies.</p>
+
+
+                      <p class="mb-30" style="margin-bottom: 0px; color: rgb(32, 32, 32);">Object-Level Security in
+                        Power BI offers a robust way to control data access at the object level, providing data privacy
+                        and tailored insights for different user groups while maintaining data security and compliance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Blog Single -->
+
+    <!-- ======= Contact Section ======= -->
+    <div id="contact" class="getintouch" style="background-color: #fffce6; padding-top: 0;">
+      <div class="container justify-content-center">
+        <div class="contact-block1">
+          <div class="row justify-content-center"> 
+
+            <div class="col-lg-9" style="background-color: white; padding: 20PX;">
+              <form action="" method="post" role="form" class="php-email-form" id="contactForm">
+                <div class="row gy-3">
+
+                  <div class="col-lg-6">
+                    <div class="form-group contact-block1">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required style="color: #999;">
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-lg-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                  </div> -->
+
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-lg-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div> -->
+
+                  <div class="mt-0">
+                    <input  style="width: 150px;" type="submit" class="btn btn-defeault btn-send" id="sendButton" value="Send message" onclick="sendEmail()">
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <!-- <li><a href="#"><i class="bi bi-facebook"></i></a></li> -->
+          <!-- <li><a href="#"><i class="bi bi-twitter"></i></a></li> -->
+          <li><a href="https://www.instagram.com/shubh_panchal__/"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shubham-panchal-157a171b3/"><i class="bi bi-linkedin"></i></a></li>
+          <li><a href="https://github.com/shubhDeveloper"><i class="bi bi-github"></i></a></li>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights @2023. All rights reserved.</p>
+
+      <div class="credits" style="color: #cecece;">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+      -->
+        Designed & Developed by ShubhamPanchal
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+     <!-- Your other head content here -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("iRoWkrDy3iPE1-BL6"); // Replace with your EmailJS user ID
+
+  // Function to send email
+  let originalButtonText; // Store the original button text
+
+function sendEmail() {
+  const btn = document.getElementById('sendButton');
+  const form = document.getElementById('contactForm');
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (!originalButtonText) {
+    originalButtonText = btn.value; // Store the original button text if not stored already
+  }
+
+  if (!name || !email || !message) {
+    // alert('Please fill in all fields before sending.');
+    return;
+  }
+
+  if (!validateEmailFormat(email)) {
+    // alert('Please enter a valid email address.');
+    return;
+  }
+
+  btn.value = 'Sending...';
+
+  const serviceID = 'default_service';
+  const templateID = 'template_ix7jkwf';
+
+  emailjs.sendForm(serviceID, templateID, form)
+    .then(() => {
+      btn.value = originalButtonText; // Restore the original button text
+      alert('Your message has been sent successfully!');
+      form.reset(); // Reset the form fields
+    })
+    .catch((err) => {
+      btn.value = originalButtonText; // Restore the original button text
+      alert('You are Offline. Kindly connect with network!');
+    });
+}
+
+function validateEmailFormat(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
+
+</script>
+
+</body>
+
+</html>

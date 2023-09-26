@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DAX - Data Analysis Expression</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Folio
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Blog Single ======= -->
+    <div class="main-content paddsection" style="padding-top: 30px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-md-offset-2">
+            <div class="row">
+              <div class="container-main single-main">
+                <div class="col-md-12">
+                  <div class="block-main mb-30">
+                    <img src="assets/img/blogs/DAX.jpg" class="img-responsive" alt="reviews2" style="height: 625px; width: 1100px;">
+                    <div class="content-main single-post padDiv">
+                      <div class="journal-txt">
+                        <h4 style="font-size: 20px;">Introduction of DAX and Important DAX Functions </h4>
+                      </div>
+                      <div class="post-meta">
+                        <ul class="list-unstyled mb-0">
+                          <li class="author">by:<a href="#">Shubham</a></li>
+                          <li class="date">date:<a href="#">september 03, 2023</a></li>
+                          <!-- <li class="commont"><i class="ion-ios-heart-outline"></i><a href="#">3 Comments</a></li> -->
+                        </ul>
+                      </div>
+                      <h4 style="font-size: 18px; padding-top: 25px;">Introduction:</h4>
+                      <p class="mb-30" style="color: rgb(32, 32, 32);">DAX, or Data Analysis Expressions, is a formula language and calculation engine used primarily in Microsoft Power BI, as well as other Microsoft tools like Excel Power Pivot and Analysis Services Tabular models. DAX is designed to perform data modeling and calculations on data stored in tables and columns. It allows users to create custom calculations, aggregations, and business metrics for their data, enabling more advanced data analysis and reporting capabilities.</p>
+                      
+                      <h4 style="font-size: 18px; padding-top: 25px;">DAX Functions:</h4>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>1. SUM:</b><br> <b style="color: #5d5d5d;">'SUM([Sales])' </b>  calculates the sum of sales values in a column. For example, if you have a sales table with a "Sales" column, this DAX formula would give you the total sales amount.</p>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>2. AVERAGE:</b><br> <b style="color: #5d5d5d;">'AVERAGE([Revenue])' </b>  calculates the average revenue from a "Revenue" column. It adds up all the revenue values and divides by the number of rows.</p>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>3. COUNT:</b><br> <b style="color: #5d5d5d;">'COUNT([Customers])' </b>  counts the number of customers in a "Customers" column. It provides the total count of unique customer IDs.</p>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>4. MAX and MIN::</b><br> <b style="color: #5d5d5d;">'MAX([Profit])' </b>   returns the highest profit value in the "Profit" column, while <br><b style="color: #5d5d5d;">'MIN([Temperature])' </b>gives you the lowest temperature recorded in the "Temperature" column.</p>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>5. IF:</b><br> Suppose you want to categorize sales into "High" or "Low" based on a threshold:</p>
+                      <blockquote>IF([Sales] > 1000, "High", "Low")</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This DAX expression checks if the sales value is greater than 1000. If it is, it returns "High"; otherwise, it returns "Low."</p>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>6. CALCULATE:</b><br> If you want to calculate total sales for the year 2023, you can use CALCULATE with a filter:</p>
+                      <blockquote>CALCULATE([Total Sales], FILTER('Date', 'Date'[Year] = 2023))</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This formula calculates the total sales, but only for the year 2023 by applying a filter on the 'Date' table.</p>
+                      
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>7. FILTER:</b><br> The FILTER function is used to filter a table or a column based on a specified condition.</p>
+                      <blockquote>High Sales = FILTER(Sales, Sales[Amount] > 1000)</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This DAX formula filters the "Sales" table to include only rows where the sales amount is greater than 1000.</p>
+
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>8. ALL:</b><br> The ALL function removes filters from a table or column, returning the entire table or column.</p>
+                      <blockquote>Total Sales = CALCULATE(SUM(Sales[Amount]), ALL('Date'))</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This DAX formula calculates the total sales across all dates, even if there are filters applied to the "Date" table.</p>
+
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>9. KEEPFILTERS:</b><br> The KEEPFILTERS function preserves existing filters on a table or column while applying new filters.</p>
+                      <blockquote>Filtered Sales = CALCULATE(SUM(Sales[Amount]), 'Date'[Year] = 2023, KEEPFILTERS('Product'[Category] = "Electronics"))</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This DAX formula calculates the total sales for the year 2023 while preserving any existing filters on the "Product" category.</p>
+
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>10. REMOVEFILTERS:</b><br> The REMOVEFILTERS function temporarily removes all filters from a table or column for the duration of the calculation.</p>
+                      <blockquote>Total Sales = CALCULATE(SUM(Sales[Amount]), REMOVEFILTERS('Date'))</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This DAX formula calculates the total sales without any filters applied to the "Date" table.</p>
+
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>11. SAMEPERIODLASTYEAR</b><br> Returns a table of dates for the same period in the previous year.</p>
+                      <blockquote>Prior Year Sales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This function is used for year-over-year comparisons.</p>
+
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>12. CALENDAR:</b><br> Generates a table of dates within a specified date range.</p>
+                      <blockquote>Custom Calendar = CALENDAR(DATE(2023, 1, 1), DATE(2023, 12, 31))</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This function can be used to create a custom date table.</p>
+
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>13. TODAY and NOW:</b><br> TODAY returns the current date, while NOW returns the current date and time.</p>
+                      <blockquote>Current Date = TODAY()<br>
+                        Current Date and Time = NOW()</blockquote>
+                      
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>14. YEAR, MONTH, and DAY:</b><br> These functions extract the year, month, or day component from a date.</p>
+                      <blockquote>Order Year = YEAR('Sales'[Order Date])<br>
+                        Order Month = MONTH('Sales'[Order Date])<br>
+                        Order Day = DAY('Sales'[Order Date])</blockquote>
+                     
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>15. CALENDARAUTO:</b><br> Automatically creates a date table based on date columns in your data model.</p>
+                      <blockquote>CalendarAuto = CALENDARAUTO()</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">This DAX function generates a date table based on date columns present in your dataset.</p>
+
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);"><b>16. DATEDIFF: </b><br> Calculates the difference between two dates in terms of a specified interval (e.g., days, months).</p>
+                      <blockquote>Days Between Orders = DATEDIFF(MIN('Orders'[Order Date]), MAX('Orders'[Ship Date]), DAY)</blockquote>
+                      <p class="mb-30"style="margin-bottom: 0px; color: rgb(32, 32, 32);">TThis DAX formula calculates the number of days between the earliest order date and the latest ship date in the "Orders" table.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Blog Single -->
+
+    <!-- ======= Contact Section ======= -->
+    <div id="contact" class="getintouch" style="background-color: #fffce6; padding-top: 0;">
+      <div class="container justify-content-center">
+        <div class="contact-block1">
+          <div class="row justify-content-center"> 
+
+            <div class="col-lg-9" style="background-color: white; padding: 20PX;">
+              <form action="" method="post" role="form" class="php-email-form" id="contactForm">
+                <div class="row gy-3">
+
+                  <div class="col-lg-6">
+                    <div class="form-group contact-block1">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required style="color: #999;">
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-lg-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                  </div> -->
+
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-lg-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div> -->
+
+                  <div class="mt-0">
+                    <input  style="width: 150px;" type="submit" class="btn btn-defeault btn-send" id="sendButton" value="Send message" onclick="sendEmail()">
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <!-- <li><a href="#"><i class="bi bi-facebook"></i></a></li> -->
+          <!-- <li><a href="#"><i class="bi bi-twitter"></i></a></li> -->
+          <li><a href="https://www.instagram.com/shubh_panchal__/"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shubham-panchal-157a171b3/"><i class="bi bi-linkedin"></i></a></li>
+          <li><a href="https://github.com/shubhDeveloper"><i class="bi bi-github"></i></a></li>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights @2023. All rights reserved.</p>
+
+      <div class="credits" style="color: #cecece;">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+      -->
+        Designed & Developed by ShubhamPanchal
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+      <!-- Your other head content here -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("iRoWkrDy3iPE1-BL6"); // Replace with your EmailJS user ID
+
+  // Function to send email
+  let originalButtonText; // Store the original button text
+
+function sendEmail() {
+  const btn = document.getElementById('sendButton');
+  const form = document.getElementById('contactForm');
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (!originalButtonText) {
+    originalButtonText = btn.value; // Store the original button text if not stored already
+  }
+
+  if (!name || !email || !message) {
+    // alert('Please fill in all fields before sending.');
+    return;
+  }
+
+  if (!validateEmailFormat(email)) {
+    // alert('Please enter a valid email address.');
+    return;
+  }
+
+  btn.value = 'Sending...';
+
+  const serviceID = 'default_service';
+  const templateID = 'template_ix7jkwf';
+
+  emailjs.sendForm(serviceID, templateID, form)
+    .then(() => {
+      btn.value = originalButtonText; // Restore the original button text
+      alert('Your message has been sent successfully!');
+      form.reset(); // Reset the form fields
+    })
+    .catch((err) => {
+      btn.value = originalButtonText; // Restore the original button text
+      alert('You are Offline. Kindly connect with network!');
+    });
+}
+
+function validateEmailFormat(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
+
+</script>
+
+</body>
+
+</html>
