@@ -712,7 +712,7 @@ p {
   transition: all ease-in-out 0.3s;
   background: rgb(0 9 39 / 90%);
   padding: 15px;
-  width: 320px;
+  width: 300px;
 }
 
 #portfolio .portfolio-item .portfolio-info h4 {
