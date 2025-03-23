@@ -1565,4 +1565,74 @@ blockquote {
     display: inline-block;
     margin-right: 0;
   }
+
+  
+}
+
+
+/* .btn-custom {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #ff2b52;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(255, 43, 82, 0.3);
+}
+
+.btn-custom:hover {
+  background: #d92044;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 43, 82, 0.5);
+}
+
+.btn-secondary {
+  background: #ffcc00;
+  color: #222;
+  margin-left: 15px;
+}
+
+.btn-secondary:hover {
+  background: #e6b800;
+} */
+
+.btn-custom {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(20, 30, 70);  /* Slight transparency */
+  text-decoration: none;
+  border-radius: 4px;  /* Square shape */
+  border: 1px solid rgb(255, 248, 223); /* Border for definition */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgb(228, 255, 247);
+}
+
+.btn-custom:hover {
+  background: rgb(41, 58, 122); /* Fully solid on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgb(201, 203, 240);
+}
+
+/* Portfolio Seperate */
+
+.section-title-seperate {
+  margin-bottom: 30px;
+}
+
+.portfolio-seperate {
+  background-color: #eaffe4;
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+.section-title-seperate h2 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
