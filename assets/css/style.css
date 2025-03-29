@@ -232,6 +232,7 @@ p {
   letter-spacing: 1px;
   font-family: "Playfair Display", sans-serif;
   font-style: italic;
+  text-align: left;
 }
 
 #header .logo a {
